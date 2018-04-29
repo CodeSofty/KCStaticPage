@@ -1,0 +1,287 @@
+/* Base  Styles ------------- */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	
+	color: #878787;
+	margin: 0;
+	font: 1em/1.5 Bookman, Times, serif;
+}
+
+
+h1 {
+	color:  rgba(255, 255, 255, 1);
+	font-size: 5.625rem;
+	text-transform: uppercase;
+	font-weight: normal;
+	line-height: 1.3;
+	margin: 12px 0 0;
+	text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+
+
+}
+
+
+
+h2 {
+
+	font-size: 3.3125em;
+	font-weight: normal;
+	line-height: 1.1;
+	margin-bottom: 0 0 .5em;	
+}
+
+h3 {
+
+	font-size: 5em;
+	line-height: 1.2;
+	margin-bottom: 1.7em;
+	color: white;
+	text-shadow: 2px 2px 2px black;
+}
+
+img {
+
+	max-width: 100%;
+	height: auto;
+	margin-bottom: 20px;
+	border-radius: 10px;
+}
+
+ul,
+ol {
+
+	padding-left: 0;
+	margin-left: 0;
+	list-style-type: none;
+}
+
+li {
+
+	margin-bottom: 10px;
+}
+
+/* the list below is an experiment making a navigation mennu*/
+
+/*li {
+
+	display: inline;
+	border-right: solid 1px;
+	padding: 0 12px;
+	font-size: 1.25em;
+	text-align: auto;
+}*/
+
+/* Main Styles --------- */
+
+.main-header {
+	padding-top: 170px;
+	height: 850px;
+	background: linear-gradient(#e6f7ff, transparent 90%),
+				linear-gradient(0deg, #fff, transparent),
+				lightblue  url('images/atkins.jpg') no-repeat center;
+	background-size: cover;
+
+}
+
+.title {
+	color: white;
+	font-size: 1.625rem;
+	text-shadow: 2px 2px 2px black;
+	letter-spacing: .065em;
+	font-weight: 200;
+	border-bottom: 2px solid;
+	padding-bottom: 10px;
+	
+}
+
+.intro {
+	font-size: 1.25em;
+	line-height: 1.6;
+}
+
+.primary-content,
+.main-header,
+.main-footer {
+
+	text-align: center;	
+
+}
+
+.primary-content {
+	padding-top: 25px;
+	padding-bottom: 95px;
+}
+
+.secondary-content{
+	padding-top: 80px;
+	padding-bottom: 70px;
+	border-bottom: 2px solid green;
+}
+
+.callout {
+	font-size: 1.25em;
+	border-bottom: 3px solid;
+	padding: 0 9px 3px;
+	margin-top: 20px;
+	display: inline-block;
+
+	}
+
+.main-footer {
+
+	padding: 0;
+	margin: 0;
+	border-bottom: 10px solid #ffa949;
+
+}
+
+.t-border {
+	border-top: 2px solid green;
+}
+
+
+
+/* Psuedo Class Selectors */
+
+a:link {
+	color: blue;
+	text-decoration: none;
+}
+
+a:visited {
+	color: blue;
+}
+
+a:hover {
+	color: slateblue;
+}
+
+a:active {
+	color: purple;
+}
+
+
+/* Layout Styles -----------------*/
+
+.primary-content,
+.secondary-content {
+
+	width: 75%;
+	padding-left: 50px;
+	padding-right: 50px;
+	margin: auto;
+	max-width: 960px;
+
+}
+
+
+
+.entertainment {
+
+	color : red;
+	text-align: center;
+	padding: 13% 16%;
+	margin: 105px 0 60px;
+	border-top: 10px solid coral;
+	background: #434a52 url('images/guide.jpg') no-repeat center;
+	background-size:cover;
+	background-blend-mode: screen;
+	box-shadow: inset 0 0 50px 10px rgba(0,0,0, 1);
+	border-radius: 10px;
+
+
+}
+
+
+.arrow {
+	width:50px;
+	margin-top: 150px;
+}
+
+.wrapper {
+	width: 90%
+	min-height: calc(100vh -70px);
+	text-align: center;
+}
+
+/* Floated columns  ------------- */
+
+.techimage,
+.resources {
+
+	width: 30%;
+	margin: 0 auto;
+}
+
+.col {
+
+	float: left;
+	width: 49%;
+}
+
+
+
+/* Float Clearfix */
+
+.clearfix::after {
+
+	content: "";
+	display: table;
+	clear: both;
+}
+
+ /* ----- Media Queries ------------*/
+
+
+@media (max-width: 768px) {
+  .primary-content,
+  .secondary-content {
+    width: 100%;
+    padding: 20px;
+    border-top: none;
+  }
+
+  .main-header {
+  max-height: 380px;
+  padding: 50px 25px 0;
+  }
+
+  .title {
+  font-size: 1.3rem;
+  border:none;
+  }
+
+h1 {
+  font-size: 5rem;
+  line-height: 1.1;
+  }
+.arrow {
+  display: none;
+  }
+
+.intro {
+  font-size: 1rem;
+  }
+.col {
+  float: none;
+  width: 100%;
+  }
+.main-footer {
+  padding: 20px 0;
+  }
+}
